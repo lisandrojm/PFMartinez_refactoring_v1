@@ -25,8 +25,12 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   return (
-    <div className="pt-3">
-      <h3>{greeting}</h3>
+    <div>
+      {categoryId === undefined && (
+        <div className="pt-3">
+          <h3>{greeting}</h3>
+        </div>
+      )}
       {loading ? <ItemLoading text="Loading ..." /> : <ItemList products={products} />}
     </div>
   );

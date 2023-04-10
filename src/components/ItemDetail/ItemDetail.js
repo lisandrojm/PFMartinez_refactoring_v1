@@ -21,6 +21,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     };
     addItem(item, quantity);
   };
+  const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
     <Card style={{ width: '18rem' }} className="mb-4">
@@ -32,7 +33,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
           </div>
           <div>
             <Card.Text>
-              <b>Categoría</b> = {category}
+              <b>Categoría</b> = {formattedCategory}
             </Card.Text>
           </div>
           <div>
